@@ -1,4 +1,18 @@
-
+ _G.noclip = true-- toggle to true to enable 
+ 
+ local Loop  game:GetService('RunService').Stepped:connect(function()
+            if _G.noclip then
+                for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("BasePart") then
+                        if v.CanCollide ~= not _G.noclip then
+                            v.CanCollide = not _G.noclip
+                        end
+                    end
+                end
+            end
+            
+            
+ end)
 local Player = game:GetService("Players").LocalPlayer local Char = Player.Character or Player.CharacterAdded:Wait() local Root = Char:WaitForChild("HumanoidRootPart")  local bV = Instance.new("BodyVelocity") bV.Velocity, bV.MaxForce = Vector3.new(), Vector3.new(9e9, 9e9, 9e9); bV.Parent = Root
  local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
    		e:GetChildren()[2].Text  = "Status: Teleporting To Computers"  
@@ -2463,7 +2477,25 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(60.608650207
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(61.075042724609375, 159.24049377441406, -4733.2392578125))
  wait()
 
-
+                      
+    local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
+   		e:GetChildren()[2].Text  = "Status: Teleporting to Volcano Base"  
+ _G.noclip = false-- toggle to true to enable 
+ 
+ local Loop  game:GetService('RunService').Stepped:connect(function()
+            if _G.noclip then
+                for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("BasePart") then
+                        if v.CanCollide ~= not _G.noclip then
+                            v.CanCollide = not _G.noclip
+                        end
+                    end
+                end
+            end
+            
+            
+ end)
+ 
  local teleport = loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentJonesFortnite/expi/main/e"))();
 	teleport(CFrame.new(2282.201904296875, 18.81041717529297, -2054.352783203125));
 	_G.Teleporting = false
@@ -2990,5 +3022,5 @@ for _, v in next, game.Players.LocalPlayer.Character:GetDescendants() do
    	
                       
 end 
-             
+       
 Root.BodyVelocity:Destroy()
