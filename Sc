@@ -1005,7 +1005,7 @@ if v.Name == "CutRemote"  then
 v:FireServer()
 end 
 end 
-wait(1)
+wait(0.3)
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-39.95999526977539, -76.17334747314453, -4731.95068359375))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-39.86750411987305, -76.17304229736328, -4732.02001953125))
@@ -2480,6 +2480,7 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(61.075042724
                       
     local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
    		e:GetChildren()[2].Text  = "Status: Teleporting to Volcano Base"  
+Root.BodyVelocity:Destroy()
  _G.noclip = false-- toggle to true to enable 
  
  local Loop  game:GetService('RunService').Stepped:connect(function()
@@ -3023,4 +3024,4 @@ for _, v in next, game.Players.LocalPlayer.Character:GetDescendants() do
                       
 end 
        
-Root.BodyVelocity:Destroy()
+
