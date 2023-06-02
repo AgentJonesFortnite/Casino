@@ -1541,8 +1541,7 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(243.82179260
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(245.623046875, -77.07228088378906, -4547.4033203125))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(247.42337036132812, -77.07227325439453, -4547.39453125))
-
- wait()
+wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(249.22344970703125, -77.07241821289062, -4547.38671875))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(251.12344360351562, -77.09679412841797, -4547.37890625))
@@ -1579,8 +1578,7 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(269.78915405
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(269.7801818847656, -77.07811737060547, -4527.0849609375))
  local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Teleporting to Elevator"  
-   
+   		e:GetChildren()[2].Text  = "Status: Teleporting to Elevator" 
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(269.77288818359375, -77.07807922363281, -4525.48486328125))
  wait()
