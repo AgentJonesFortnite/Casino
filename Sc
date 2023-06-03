@@ -15,6 +15,9 @@
  end)
 local Player = game:GetService("Players").LocalPlayer local Char = Player.Character or Player.CharacterAdded:Wait() local Root = Char:WaitForChild("HumanoidRootPart")  local bV = Instance.new("BodyVelocity") bV.Velocity, bV.MaxForce = Vector3.new(), Vector3.new(9e9, 9e9, 9e9); bV.Parent = Root
  local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
+_G.RobberyTimerStats = true
+_G.RobberyTimer = true
+_G.SecondsTimer = true
    		e:GetChildren()[2].Text  = "Status: Teleporting To Computers"  
  
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(44.414424896240234, 155.27218627929688, -4734.1064453125))
@@ -3017,7 +3020,9 @@ for _, v in next, game.Players.LocalPlayer.Character:GetDescendants() do
 
                                    local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
    		e:GetChildren()[2].Text  = "Status: Not robbing" 
-   		 
+   		 _G.RobberyTimerStats = false
+_G.RobberyTimer = false
+_G.SecondsTimer = false
    	
                       
 end 
