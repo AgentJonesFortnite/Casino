@@ -1439,7 +1439,11 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(172.98046875
  local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
    		e:GetChildren()[2].Text  = "Status: Hacking Vault (This May Break)"
    		_G.AutoVault = true
-   		wait(15)
+local myvalue = game:GetService("Workspace").Casino.HackableVaults.VaultDoorMain.InnerModel.Puzzle.InnerModel.Arms
+local valueconnect
+valueconnect = myvalue:GetPropertyChangedSignal("CFrame"):Connect(function()
+   valueconnect:Disconnect()
+
    		_G.AutoVault = false
    		 local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
    		e:GetChildren()[2].Text  = "Status: Teleporting To Cash"  
@@ -3027,4 +3031,6 @@ _G.SecondsTimer = false
                       
 end 
        
+   valueconnect:Disconnect()
 
+end)
