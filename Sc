@@ -13,12 +13,18 @@
             
             
  end)
+ function SetStatus(Status)
+                                                                                      local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
+
+
+        e:GetChildren()[2].Text  = "Status: "..Status..""
+    end
 local Player = game:GetService("Players").LocalPlayer local Char = Player.Character or Player.CharacterAdded:Wait() local Root = Char:WaitForChild("HumanoidRootPart")  local bV = Instance.new("BodyVelocity") bV.Velocity, bV.MaxForce = Vector3.new(), Vector3.new(9e9, 9e9, 9e9); bV.Parent = Root
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
+ 
 _G.RobberyTimerStats = true
 _G.RobberyTimer = true
 _G.SecondsTimer = true
-   		e:GetChildren()[2].Text  = "Status: Teleporting To Computers"  
+   		SetStatus("Teleporting To Computers") 
  
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(44.414424896240234, 155.27218627929688, -4734.1064453125))
  wait()
@@ -324,8 +330,8 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(60.627445220
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(61.121395111083984, 69.57959747314453, -4670))
  wait()
-   local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Hacking Computers"  
+   
+   		SetStatus("Hacking Computers")
    		_G.AutoHackPCS = true
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(61.56334686279297, 69.57959747314453, -4668.3564453125))
  wait()
@@ -687,8 +693,8 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(8.7180089950
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(10.628829956054688, 76.81182861328125, -4677.0107421875))
  wait()
-  local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Teleporting To Vaults"  
+  
+SetStatus("Teleporting To Vaults")
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(12.495095252990723, 76.81182861328125, -4676.30517578125))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(14.3056001663208, 76.81182861328125, -4676.42529296875))
@@ -1001,8 +1007,8 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-39.68252563
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-39.95977020263672, -76.17415618896484, -4731.951171875))
  wait()
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Breaking Glass"
+ 
+   	SetStatus("Breaking Glass")
    		   for i,v in pairs(game:GetService("Workspace").Casino:GetDescendants()) do
 if v.Name == "CutRemote"  then
 v:FireServer()
@@ -1028,8 +1034,8 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-32.76617050
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-31.687030792236328, -77.03726959228516, -4734.62841796875))
  wait()
 wait(0.5)
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Teleporting To Vault"
+ 
+   		SetStatus("Teleporting To Vault")
    		game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-31.687095642089844, -77.02642059326172, -4734.62890625))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-32.75298309326172, -77.02642059326172, -4734.3212890625))
@@ -1436,17 +1442,17 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(172.98046875
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(172.98046875, -77.02845001220703, -4526.98876953125))
  wait()
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Hacking Vault (This May Break)"
+ 
+   		SetStatus("Hacking Vault (May Break Based On Your Ping)")
    		_G.AutoVault = true
-local myvalue = game:GetService("Workspace").Casino.HackableVaults.VaultDoorMain.InnerModel.Puzzle.InnerModel.Arms
+local myvalue = game:GetService("Workspace").Casino.HackableVaults.VaultDoorMain.InnerModel.Model.Body
 local valueconnect
 valueconnect = myvalue:GetPropertyChangedSignal("CFrame"):Connect(function()
    valueconnect:Disconnect()
 
    		_G.AutoVault = false
-   		 local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Teleporting To Cash"  
+   		 
+   		SetStatus("Teleporting To Cash")
    		game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(172.4602813720703, -77.0284423828125, -4526.6923828125))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(173.40638732910156, -77.0284423828125, -4526.68603515625))
@@ -1510,9 +1516,9 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(222.88012695
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(224.78024291992188, -77.12859344482422, -4526.43310546875))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(226.58035278320312, -77.12873077392578, -4526.42431640625))
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Collecting Cash"  
- wait()
+ 
+SetStatus("Collecting Cash")
+wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(227.94569396972656, -77.12309265136719, -4527.470703125))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(229.29428100585938, -77.0842514038086, -4528.8115234375))
@@ -1584,9 +1590,9 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(269.79922485
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(269.7891540527344, -77.07817840576172, -4528.88525390625))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(269.7801818847656, -77.07811737060547, -4527.0849609375))
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Teleporting to Elevator" 
- wait()
+ 
+SetStatus("Teleporting To Elevator")
+wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(269.77288818359375, -77.07807922363281, -4525.48486328125))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(269.7636413574219, -77.07743835449219, -4523.38330078125))
@@ -2169,9 +2175,8 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-13.78674602
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-13.78674602508545, -77.02318572998047, -4744.35595703125))
  wait()
 
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Teleporting To Top"  
-
+ 
+SetStatus("Teleporting To Top")
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-14.7138671875, -77.02643585205078, -4741.138671875))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-14.7138671875, -77.02643585205078, -4741.138671875))
@@ -2401,9 +2406,8 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-10.34746646
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-8.464005470275879, 159.24049377441406, -4738.3671875))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-6.872066974639893, 159.24049377441406, -4737.48193359375))
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Teleporting To Car"  
- wait()
+ 
+SetStatus("Teleporting To Car") wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-5.131321907043457, 159.24049377441406, -4736.51708984375))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(-3.241396903991699, 159.24049377441406, -4735.47119140625))
@@ -2483,8 +2487,8 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(61.075042724
  wait()
 
                       
-    local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Teleporting to Volcano Base"  
+    
+SetStatus("Teleporting To Volcano Base") 
 Root.BodyVelocity:Destroy()
  _G.noclip = false-- toggle to true to enable 
  
@@ -2509,9 +2513,8 @@ Root.BodyVelocity:Destroy()
 if game:GetService("Players").LocalPlayer.Character.Humanoid:GetState() == Enum.HumanoidStateType.Seated then 
    
                       
-    local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Going to collector"  
- 
+    
+SetStatus("Going To Collector") 
  
         game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(2281.304931640625, 19.55556869506836, -2088.039794921875))
  wait()
@@ -2763,9 +2766,8 @@ game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(2289.0812988
  wait()
 
 
- local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Exiting Volcano Base" 
-   		
+ 
+SetStatus("Exiting Volcano Base")   		
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(2288.120361328125, 19.791364669799805, -2589.233154296875))
  wait()
 game:GetService("Players").LocalPlayer.Character:PivotTo(CFrame.new(2286.186767578125, 19.774486541748047, -2585.727294921875))
@@ -3022,9 +3024,8 @@ for _, v in next, game.Players.LocalPlayer.Character:GetDescendants() do
 
 
 
-                                   local e =  game:GetService("CoreGui").imgui.Windows.Window.Tabs:GetChildren()[3]
-   		e:GetChildren()[2].Text  = "Status: Not robbing" 
-   		 _G.RobberyTimerStats = false
+                                   
+SetStatus("Not Robbing")   		 _G.RobberyTimerStats = false
 _G.RobberyTimer = false
 _G.SecondsTimer = false
    	
